@@ -10,7 +10,7 @@ services:
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
       # - '/opt/nextcloud-aio/data:/mnt/ncdata:rw'
     ports:
-#      - '11000:80'
+      - '11000:80'
       - '11001:8080' # interface AIO, port for http, mastercontainer
       - '10999:8443' # # HTTPS AIO (certificats Let's Encrypt)
     environment:
