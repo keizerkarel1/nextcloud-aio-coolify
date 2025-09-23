@@ -1,8 +1,6 @@
 .idea
-/test_scraping_2/test_scrapping_1
 .env
 *.egg-info
 **/__pycache__/
 
-# dagster
 .tmp_*/

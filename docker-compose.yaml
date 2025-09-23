@@ -10,9 +10,9 @@ services:
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
       # - '/opt/nextcloud-aio/data:/mnt/ncdata:rw'
     ports:
-      - '11000:80'
-      - '11001:8080'
-      - '10999:8443'
+#      - '11000:80'
+      - '11001:8080' # port for http, mastercontainer
+#      - '10999:8443'
     environment:
       - APACHE_PORT=${APACHE_PORT:-11002}
       - APACHE_IP_BINDING=${APACHE_IP_BINDING:-0.0.0.0}
