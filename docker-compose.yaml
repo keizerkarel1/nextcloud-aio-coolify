@@ -11,7 +11,7 @@ services:
       # - '/opt/nextcloud-aio/data:/mnt/ncdata:rw'
     ports:
 #      - '11000:80'
-      - '11002:11002' # interface apache
+      - '11002:80' # interface apache
       - '11001:8080' # interface AIO, port for http, mastercontainer
       - '10999:8443' # HTTPS AIO (certificats Let's Encrypt)
     environment:
