@@ -10,9 +10,10 @@ services:
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
       # - '/opt/nextcloud-aio/data:/mnt/ncdata:rw'
     ports:
-      - '11000:80'
+#      - '11000:80'
+      - '11002:11002' # interface apache
       - '11001:8080' # interface AIO, port for http, mastercontainer
-      - '10999:8443' # # HTTPS AIO (certificats Let's Encrypt)
+      - '10999:8443' # HTTPS AIO (certificats Let's Encrypt)
     environment:
       - APACHE_PORT=${APACHE_PORT:-11002}
       - APACHE_IP_BINDING=${APACHE_IP_BINDING:-0.0.0.0}
@@ -28,6 +29,7 @@ services:
       - nextcloud-aio
 
   cloudflare-tunnel:
+    # service : http://nextcloud-aio-mastercontainer:11002
     image: 'cloudflare/cloudflared:latest'
     container_name: nextcloud-aio-cloudflare
     networks:
