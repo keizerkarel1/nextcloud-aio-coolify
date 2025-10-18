@@ -16,7 +16,7 @@ To address this, here's an adapted docker-compose file and a mini-tutorial:
 We won't be using Coolify's proxy, but will instead create a Cloudflare tunnel
 - Create an account in https://dash.cloudflare.com/
 - Add you domain_name and allow cloudflare to manage it
-- Go to Zero Trust -> Netxorks -> Tunnels
+- Go to Zero Trust -> Networks -> Tunnels
 - Create a new tunnel
 - Add the domain_name to the tunnel
 - The tunnel must point to : http://nextcloud-aio-apache:11000 
